@@ -8,7 +8,6 @@ class Program
         myName = "Jane";
 
         Console.WriteLine(myName);
-
-        Console.ReadKey();
+        Console.WriteLine('\x23');
     }
 }
