@@ -4,20 +4,18 @@ class Program
 {
     public static void Main(string[] args)
     {
-        string Name = "Jane";
-        byte Age    = 27;
-        bool Pet    = true;
-        float Size  = 37.5F;
+        Console.Write("Как Вас зовут? ");
+        var Name = Console.ReadLine();
 
-        Console.WriteLine("My name is " + Name);
-        Console.WriteLine("My age is " + Age);
-        if (Pet) {
-            Console.WriteLine("I have a pet");
-        }
-        else
-        {
-            Console.WriteLine("I don't have a pet");
-        }
-        Console.WriteLine("My shoe size is " + Size);
+        Console.Write("Сколько Вам лет? ");
+        var Age = checked((byte)int.Parse(Console.ReadLine()));
+
+        Console.Write("Ваша дата рождения? ");
+        var BirthDate = Console.ReadLine();
+
+        Console.WriteLine("Спасибо {0}", Name);
+        Console.WriteLine("Вы родились {0}, и Ваш возраст {1} лет", BirthDate, Age.ToString());
+
+        Console.ReadKey();
     }
 }
